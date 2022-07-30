@@ -1,3 +1,18 @@
 body{
   background:#383638
 }
+.items-wrapper{
+  background-color:rgba(128, 128, 128, 0.201);
+  padding:20px;
+  height:620px;
+  width:70%;
+  margin:20px auto;
+
+  
+}
+#root{
+  display:flex;
+  height:100vh;
+  align-items:center
+  
+}

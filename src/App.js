@@ -1,6 +1,7 @@
 import "./App.css";
-import ExpenseItem from "./Components/ExpenseItem";
-function App() {
+import ExpensesComponents from "./Components/Expenses/ExpensesComponents";
+import Card from "./Components/UI/Card";
+const App = () => {
   const expense = [
     {
       id: "e1",
@@ -23,24 +24,10 @@ function App() {
     },
   ];
   return (
-    <div>
-      <h1>hello</h1>
-      <ExpenseItem
-        title={expense[0].title}
-        amount={expense[0].amount}
-        date={expense[0].date}
-      ></ExpenseItem>
-       <ExpenseItem
-        title={expense[1].title}
-        amount={expense[1].amount}
-        date={expense[1].date}
-      ></ExpenseItem>
-          <ExpenseItem
-        title={expense[2].title}
-        amount={expense[2].amount}
-        date={expense[2].date}
-      ></ExpenseItem>
-    </div>
+    <Card className="items-wrapper">
+      <ExpensesComponents item={expense}></ExpensesComponents>
+     
+    </Card>
   );
 }
 
