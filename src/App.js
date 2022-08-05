@@ -1,6 +1,7 @@
 import "./App.css";
 import ExpensesComponents from "./Components/Expenses/ExpensesComponents";
 import Card from "./Components/UI/Card";
+import NewExpense from './Components/NewExp/NewExpense';
 const App = () => {
   const expense = [
     {
@@ -24,10 +25,13 @@ const App = () => {
     },
   ];
   return (
+    <div className="wrapper">
+      <NewExpense />
     <Card className="items-wrapper">
       <ExpensesComponents item={expense}></ExpensesComponents>
      
     </Card>
+    </div>
   );
 }
 
