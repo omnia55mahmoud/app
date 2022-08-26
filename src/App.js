@@ -24,11 +24,14 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+const AddNewExpense = (expenseData) =>{
+     console.log(expenseData)
+}
   return (
     <div className="wrapper">
-      <NewExpense />
+      <NewExpense onAddNewExpense = {AddNewExpense}/>
     <Card className="items-wrapper">
-      <ExpensesComponents item={expense}></ExpensesComponents>
+      <ExpensesComponents item={expense}/>
      
     </Card>
     </div>

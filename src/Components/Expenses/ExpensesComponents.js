@@ -1,7 +1,12 @@
 import ExpenseItem from './ExpenseItem';
+import ExpensesFilter from '../FilterComponent/ExpensesFilter';
 const ExpensesComponents =(props) =>{
+  const filterChangeHandller = (Year)=>{
+    console.log(Year)
+ }
 return(
 <div>
+<ExpensesFilter onChangeFilter={filterChangeHandller}/>
 <ExpenseItem
   title={props.item[0].title}
   amount={props.item[0].amount}
